@@ -4,5 +4,5 @@ import "fmt"
 
 func main() {
 	osData := NewOSData()
-	fmt.Println(osData.Specific.EvtxLogs)
+	fmt.Println(osData.SpecificWindows.EvtxLogs)
 }

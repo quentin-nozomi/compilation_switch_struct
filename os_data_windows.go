@@ -2,15 +2,22 @@ package main
 
 type OSData struct {
 	OSDataCommon
-	Specific Specific
+	SpecificWindows SpecificWindows
 }
 
-type Specific struct {
+type SpecificWindows struct {
 	EvtxLogs string
 }
 
-func NewSpecific() Specific {
-	return Specific{
+func NewOSData() OSData {
+	return OSData{
+		OSDataCommon:    NewOSDataCommon(),
+		SpecificWindows: NewSpecific(),
+	}
+}
+
+func NewSpecific() SpecificWindows {
+	return SpecificWindows{
 		EvtxLogs: `C:\winevet\...`,
 	}
 }

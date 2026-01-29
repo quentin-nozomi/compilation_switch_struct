@@ -2,15 +2,22 @@ package main
 
 type OSData struct {
 	OSDataCommon
-	Specific Specific
+	SpecificLinux SpecificLinux
 }
 
-type Specific struct {
+type SpecificLinux struct {
 	SystemLog string
 }
 
-func NewSpecific() Specific {
-	return Specific{
+func NewOSData() OSData {
+	return OSData{
+		OSDataCommon:  NewOSDataCommon(),
+		SpecificLinux: NewSpecific(),
+	}
+}
+
+func NewSpecific() SpecificLinux {
+	return SpecificLinux{
 		SystemLog: "/var/log",
 	}
 }

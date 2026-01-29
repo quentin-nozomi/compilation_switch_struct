@@ -7,10 +7,3 @@ type OSDataCommon struct {
 func NewOSDataCommon() OSDataCommon {
 	return OSDataCommon{}
 }
-
-func NewOSData() OSData {
-	return OSData{
-		OSDataCommon: NewOSDataCommon(),
-		Specific:     NewSpecific(),
-	}
-}
