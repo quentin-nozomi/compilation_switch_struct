@@ -1,0 +1,1 @@
+module inherit_compilation_switch
